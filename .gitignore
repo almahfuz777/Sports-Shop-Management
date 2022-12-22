@@ -1,0 +1,17 @@
+
+build.xml
+build/classes/.netbeans_automatic_build
+build/classes/.netbeans_update_resources
+build/test/classes/.netbeans_automatic_build
+build/test/classes/.netbeans_update_resources
+lib/CopyLibs/org-netbeans-modules-java-j2seproject-copylibstask.jar
+lib/nblibraries.properties
+manifest.mf
+nbproject/build-impl.xml
+nbproject/genfiles.properties
+nbproject/private/private.properties
+nbproject/private/private.xml
+nbproject/project.properties
+nbproject/project.xml
+build/classes/Main.class
+build/classes/Customer.class
