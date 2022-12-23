@@ -34,9 +34,9 @@
             <Font size="27.0" />
          </font>
       </Text>
-      <ImageView fx:id="signUp" fitHeight="137.0" fitWidth="172.0" layoutX="261.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="signUp" fitHeight="137.0" fitWidth="172.0" layoutX="279.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@signUp.jpg" />
+            <Image url="@../../../../../images/signUp.jpg" />
          </image>
       </ImageView>
    </children>
