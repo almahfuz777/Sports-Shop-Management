@@ -7,7 +7,7 @@ import java.util.Scanner ;
 public class Admin {
     Scanner sc ;
     public boolean Login(String regName , String regPass) throws IOException {
-        // file e data read korbo
+
         String check = regName+" "+regPass ;
         ArrayList<String> forCheck = new ArrayList<String>();
 
@@ -24,7 +24,7 @@ public class Admin {
 
     }
     public boolean Registration(String regName , String regPass)throws IOException{
-        //file e data add korbo(append mood e)
+
         String check = regName+" "+regPass ;
         ArrayList<String> forCheck = new ArrayList<>();
 

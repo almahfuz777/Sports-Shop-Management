@@ -36,7 +36,7 @@ public class ProductMenuController {
 
     @FXML
     void cricketBtn(ActionEvent event) throws IOException{
-        root = FXMLLoader.load(getClass().getResource("/SignUp.fxml"));
+        root = FXMLLoader.load(getClass().getResource("/Football.fxml"));
         stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
@@ -46,7 +46,7 @@ public class ProductMenuController {
 
     @FXML
     void footballBtn(ActionEvent event)throws IOException {
-        root = FXMLLoader.load(getClass().getResource("/SignUp.fxml"));
+        root = FXMLLoader.load(getClass().getResource("/Cricket.fxml"));
         stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);

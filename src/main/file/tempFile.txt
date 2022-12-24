@@ -1,21 +1,13 @@
 
-Argentina Jersey = 1000
-Barcelona Jersey = 1000
-Argentina Jersey = 1000
-Pakistan Jersey = 1000
-Ind Jersey = 1000
-PSJ Jersey = 1000
-PSJ Jersey = 1000
-PSJ Jersey = 1000
-PSJ Jersey = 1000
-Argentina Jersey = 1000
-Argentina Jersey = 1000
-Argentina Jersey = 1000
-Argentina Jersey = 1000
-Argentina Jersey = 1000
 Barcelona Jersey = 1000
 Argentina Jersey = 1000
 PSJ Jersey = 1000
 Argentina Jersey = 1000
 Pakistan Jersey = 1000
 Ind Jersey = 1000
+2022 WORLDCUP BALL= 500
+2018 WORLDCUP BALL= 500
+2014 WORLDCUP BALL= 500
+CRICKET BAT = 1000
+CRICKET BALL= 250
+CRICKET PAD = 500

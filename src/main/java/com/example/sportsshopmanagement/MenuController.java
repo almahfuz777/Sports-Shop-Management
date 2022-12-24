@@ -21,9 +21,9 @@ public class MenuController {
         System.exit(0);
     }
     @FXML
-    void UserCart(ActionEvent event)throws IOException {
-        //kaj baki
-        root = FXMLLoader.load(getClass().getResource("D:/TRYYYYYYYYYYYY4/SportsShopManagement/src/main/resources/UserCart.fxml"));
+   public void UserCart(ActionEvent event)throws IOException {
+
+        root = FXMLLoader.load(getClass().getResource("/Cart.fxml"));
         stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
@@ -56,7 +56,7 @@ public class MenuController {
     @FXML
     void UserInfoBtn(ActionEvent event) throws IOException{
         //kaj baki
-        root = FXMLLoader.load(getClass().getResource("/SignUp.fxml"));
+        root = FXMLLoader.load(getClass().getResource("/UserInfo.fxml"));
         stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
