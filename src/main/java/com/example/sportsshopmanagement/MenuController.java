@@ -21,9 +21,9 @@ public class MenuController {
         System.exit(0);
     }
     @FXML
-    void UserCart(ActionEvent event)throws IOException {
+    void UserCart(ActionEvent event) throws IOException {
         //kaj baki
-        root = FXMLLoader.load(getClass().getResource("D:/TRYYYYYYYYYYYY4/SportsShopManagement/src/main/resources/UserCart.fxml"));
+        root = FXMLLoader.load(getClass().getResource("/UserCart.fxml"));
         stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);

@@ -24,4 +24,8 @@ public class UserCartController {
     void getCartTextBtn(MouseEvent event) {
 
     }
+    @FXML
+    void cartDeleteBtn(ActionEvent event) {
+
+    }
 }
