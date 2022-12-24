@@ -23,7 +23,7 @@ public class JerseyController {
         scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
-        DataFile.CutomerBill = DataFile.CutomerBill+1000 ;
+
 
     }
 
@@ -44,7 +44,7 @@ public class JerseyController {
     void buyBDjersey(ActionEvent event) throws IOException {
         FileWriter fw = new FileWriter(DataFile.tempFIle,true);
         BufferedWriter b = new BufferedWriter(fw);
-        String addData = "\n"+"Argentina Jersey "+"= 1000";
+        String addData = "\n"+"BD Jersey "+"= 1000";
         b.write(addData);
         b.close();
         fw.close();

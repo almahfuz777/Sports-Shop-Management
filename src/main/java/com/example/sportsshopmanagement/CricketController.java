@@ -32,7 +32,7 @@ public class CricketController {
     void buyBall(ActionEvent event) throws IOException {
         FileWriter fw = new FileWriter(DataFile.tempFIle,true);
         BufferedWriter b = new BufferedWriter(fw);
-        String addData = "\n"+"CRICKET BALL"+"= 250" ;
+        String addData = "\n"+"CRICKET BAL "+"= 250" ;
         b.write(addData);
         b.close();
         fw.close();
@@ -44,7 +44,7 @@ public class CricketController {
     void buyBat(ActionEvent event)throws IOException {
         FileWriter fw = new FileWriter(DataFile.tempFIle,true);
         BufferedWriter b = new BufferedWriter(fw);
-        String addData = "\n"+"CRICKET BAT "+"= 1000" ;
+        String addData = "\n"+"CRICKET BAT"+"= 1000" ;
         b.write(addData);
         b.close();
         fw.close();
