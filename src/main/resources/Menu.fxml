@@ -26,16 +26,21 @@
             <Font size="25.0" />
          </font>
       </Button>
-      <Button layoutX="245.0" layoutY="304.0" mnemonicParsing="false" onAction="#ShopAdsBtn" prefHeight="46.0" prefWidth="203.0" text="SHOP ADS">
+      <Button layoutX="245.0" layoutY="266.0" mnemonicParsing="false" onAction="#ShopAdsBtn" prefHeight="46.0" prefWidth="203.0" text="SHOP ADS">
          <font>
             <Font size="25.0" />
          </font>
       </Button>
-      <Button layoutX="245.0" layoutY="407.0" mnemonicParsing="false" onAction="#UserInfoBtn" prefHeight="46.0" prefWidth="203.0" text="USER INFO">
+      <Button layoutX="245.0" layoutY="339.0" mnemonicParsing="false" onAction="#UserCart" prefHeight="46.0" prefWidth="203.0" text="USER CART">
          <font>
             <Font size="25.0" />
          </font>
       </Button>
       <Button layoutX="603.0" layoutY="17.0" mnemonicParsing="false" onAction="#MenuExit" prefHeight="34.0" prefWidth="62.0" text="EXIT" />
+      <Button layoutX="245.0" layoutY="418.0" mnemonicParsing="false" onAction="#UserInfoBtn" prefHeight="46.0" prefWidth="203.0" text="USER INFO">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>

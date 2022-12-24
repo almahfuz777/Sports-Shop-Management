@@ -16,7 +16,7 @@ public class ProductMenuController {
     private Parent root ;
     @FXML
     void JerseyBtn(ActionEvent event) throws IOException {
-        root = FXMLLoader.load(getClass().getResource("/SignUp.fxml"));
+        root = FXMLLoader.load(getClass().getResource("/Jersey.fxml"));
         stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
@@ -26,7 +26,7 @@ public class ProductMenuController {
 
     @FXML
     void ProductMenuExit(ActionEvent event)throws IOException {
-        root = FXMLLoader.load(getClass().getResource("/SignUp.fxml"));
+        root = FXMLLoader.load(getClass().getResource("/Menu.fxml"));
         stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);

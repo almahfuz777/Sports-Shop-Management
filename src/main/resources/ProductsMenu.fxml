@@ -36,6 +36,6 @@
             <Font size="25.0" />
          </font>
       </Button>
-      <Button layoutX="613.0" layoutY="27.0" mnemonicParsing="false" onAction="#ProductMenuExit" prefHeight="34.0" prefWidth="62.0" text="EXIT" />
+      <Button layoutX="613.0" layoutY="27.0" mnemonicParsing="false" onAction="#ProductMenuExit" prefHeight="34.0" prefWidth="62.0" text="Go Back" />
    </children>
 </AnchorPane>

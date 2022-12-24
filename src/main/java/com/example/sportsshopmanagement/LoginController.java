@@ -74,6 +74,9 @@ public class LoginController {
 
         }
         else{
+            DataFile.CustomerName=logUserName.getText() ;
+            DataFile.CustomerPass =LogUserPass.getText() ;
+
             //after login
             root = FXMLLoader.load(getClass().getResource("/Menu.fxml"));
             stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
@@ -92,6 +95,7 @@ public class LoginController {
         } else if (signUserPass.getText()=="") {
             errorLabel.setText("Password field is Empty");
         } else if (admin.Registration(signUserName.getText() ,signUserPass.getText())) {
+            DataFile.CutomerNO++;
             root = FXMLLoader.load(getClass().getResource("/Login.fxml"));
             stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
             scene = new Scene(root);
