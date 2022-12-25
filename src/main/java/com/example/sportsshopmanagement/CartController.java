@@ -11,12 +11,10 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
-import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 
 import java.io.*;
 import java.net.URL;
-import java.nio.Buffer;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
 import java.util.Scanner;
@@ -29,7 +27,6 @@ public class CartController implements Initializable {
     @FXML
     private TextArea textfileAreaofCart;
 
-
     private Stage stage ;
     private Scene scene ;
     private Parent root ;
@@ -38,11 +35,10 @@ public class CartController implements Initializable {
     private TextField cartItemName;
 
     @FXML
-    void getCartText(MouseEvent event) throws IOException{
+    public void getCartText(MouseEvent event) throws IOException{
 
         Scanner sc = new Scanner(DataFile.tempFIle);
         ArrayList<String> str = new ArrayList<>();
-
 
         while (sc.hasNext()){
             str.add(sc.nextLine()) ;
@@ -55,17 +51,11 @@ public class CartController implements Initializable {
             listString += s + "\n";
         }
 
-
         CartLabel.setText(listString);
-
-
-
-
-
     }
 
     @FXML
-    void goBackToMenu(ActionEvent event) throws IOException {
+    public void goBackToMenu(ActionEvent event) throws IOException {
         root = FXMLLoader.load(getClass().getResource("/Menu.fxml"));
         stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
@@ -74,21 +64,20 @@ public class CartController implements Initializable {
 
     }
 
-
     @FXML
-    void submitCart(ActionEvent event) throws  IOException{
-        int bill = DataFile.CutomerBill ;
+    public void submitCart(ActionEvent event) throws  IOException{
+       int bill = DataFile.CutomerBill ;
 
        String itemname = cartItemName.getText();
 
 
-         Scanner sc = new Scanner(DataFile.tempFIle);
-        ArrayList<String> str = new ArrayList<>();
+       Scanner sc = new Scanner(DataFile.tempFIle);
+       ArrayList<String> str = new ArrayList<>();
 
 
-        while (sc.hasNext()){
-            str.add(sc.nextLine()) ;
-        }
+       while (sc.hasNext()){
+           str.add(sc.nextLine()) ;
+       }
 
 
         for (int i = 0; i < str.size(); i++) {
@@ -107,7 +96,6 @@ public class CartController implements Initializable {
             listString += s + "\n";
         }
 
-
         CartLabel.setText(listString);
 
 
@@ -115,19 +103,13 @@ public class CartController implements Initializable {
 
         totalbill.setText(totalMoney);
 
-
         //file e save korte hbe ------jate store thake.........
-
-
 
     }
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-
         String str = DataFile.CutomerBill+" ";
-
-
         totalbill.setText(str);
 
     }

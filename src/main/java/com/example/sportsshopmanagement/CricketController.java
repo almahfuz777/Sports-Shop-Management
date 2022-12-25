@@ -18,18 +18,16 @@ public class CricketController {
     private Parent root ;
 
     @FXML
-    void GoBackToProductMenu(ActionEvent event)throws IOException {
+    public void GoBackToProductMenu(ActionEvent event)throws IOException {
         root = FXMLLoader.load(getClass().getResource("/ProductsMenu.fxml"));
         stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
-
-
     }
 
     @FXML
-    void buyBall(ActionEvent event) throws IOException {
+    public void buyBall(ActionEvent event) throws IOException {
         FileWriter fw = new FileWriter(DataFile.tempFIle,true);
         BufferedWriter b = new BufferedWriter(fw);
         String addData = "\n"+"CRICKET BAL "+"= 250" ;
@@ -41,7 +39,7 @@ public class CricketController {
     }
 
     @FXML
-    void buyBat(ActionEvent event)throws IOException {
+    public void buyBat(ActionEvent event)throws IOException {
         FileWriter fw = new FileWriter(DataFile.tempFIle,true);
         BufferedWriter b = new BufferedWriter(fw);
         String addData = "\n"+"CRICKET BAT"+"= 1000" ;
@@ -50,11 +48,10 @@ public class CricketController {
         fw.close();
         DataFile.CutomerBill = DataFile.CutomerBill+1000 ;
 
-
     }
 
     @FXML
-    void buyPad(ActionEvent event)throws IOException {
+    public void buyPad(ActionEvent event)throws IOException {
         FileWriter fw = new FileWriter(DataFile.tempFIle,true);
         BufferedWriter b = new BufferedWriter(fw);
         String addData = "\n"+"CRICKET PAD "+"= 500" ;
@@ -62,7 +59,6 @@ public class CricketController {
         b.close();
         fw.close();
         DataFile.CutomerBill = DataFile.CutomerBill+500 ;
-
 
     }
 

@@ -23,44 +23,42 @@ public class MenuController {
     @FXML
    public void UserCart(ActionEvent event)throws IOException {
 
-        root = FXMLLoader.load(getClass().getResource("/Cart.fxml"));
-        stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
-        scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
+       root = FXMLLoader.load(getClass().getResource("/Cart.fxml"));
+       stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
+       scene = new Scene(root);
+       stage.setScene(scene);
+       stage.show();
 
-    }
-
-    @FXML
-    void ProductsBtn(ActionEvent event) throws IOException{
-        //kaj baki
-        root = FXMLLoader.load(getClass().getResource("/ProductsMenu.fxml"));
-        stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
-        scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
-
-    }
+   }
 
     @FXML
-    void ShopAdsBtn(ActionEvent event) throws IOException{
+   public void ProductsBtn(ActionEvent event) throws IOException{
         //kaj baki
-        root = FXMLLoader.load(getClass().getResource("/SignUp.fxml"));
-        stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
-        scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
-
-    }
+       root = FXMLLoader.load(getClass().getResource("/ProductsMenu.fxml"));
+       stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
+       scene = new Scene(root);
+       stage.setScene(scene);
+       stage.show();
+   }
 
     @FXML
-    void UserInfoBtn(ActionEvent event) throws IOException{
+   public void ShopAdsBtn(ActionEvent event) throws IOException{
         //kaj baki
-        root = FXMLLoader.load(getClass().getResource("/UserInfo.fxml"));
-        stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
-        scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
+       root = FXMLLoader.load(getClass().getResource("/SignUp.fxml"));
+       stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
+       scene = new Scene(root);
+       stage.setScene(scene);
+       stage.show();
+   }
 
-    }
+    @FXML
+   public void UserInfoBtn(ActionEvent event) throws IOException{
+        //kaj baki
+       root = FXMLLoader.load(getClass().getResource("/UserInfo.fxml"));
+       stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
+       scene = new Scene(root);
+       stage.setScene(scene);
+       stage.show();
+
+   }
 }

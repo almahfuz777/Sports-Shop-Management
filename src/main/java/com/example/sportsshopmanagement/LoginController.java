@@ -20,24 +20,18 @@ public class LoginController {
     private Label errotTextField;
     @FXML
     private PasswordField LogUserPass;
-
     @FXML
     private Button logInBtn;
-
     @FXML
     private TextField logUserName;
     @FXML
     private Button SignBtn;
-
     @FXML
     private TextField signUserName;
-
     @FXML
     private PasswordField signUserPass;
-
     @FXML
     private Label errorLabel;
-
 
     private Stage stage ;
     private Scene scene ;
@@ -53,7 +47,7 @@ public class LoginController {
 
     }
     public void switchToSignIn(ActionEvent event) throws IOException{
-        //kaj shesh
+
         root = FXMLLoader.load(getClass().getResource("/Login.fxml"));
         stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);

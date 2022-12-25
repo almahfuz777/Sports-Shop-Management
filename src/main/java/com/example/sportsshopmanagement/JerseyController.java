@@ -17,18 +17,16 @@ public class JerseyController {
     private Scene scene ;
     private Parent root ;
     @FXML
-    void JerseyGoBack(ActionEvent event) throws IOException {
+    public void JerseyGoBack(ActionEvent event) throws IOException {
         root = FXMLLoader.load(getClass().getResource("/ProductsMenu.fxml"));
         stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
-
-
     }
 
     @FXML
-    void buyArgJersey(ActionEvent event) throws IOException {
+    public void buyArgJersey(ActionEvent event) throws IOException {
 
         FileWriter fw = new FileWriter(DataFile.tempFIle,true);
         BufferedWriter b = new BufferedWriter(fw);
@@ -41,7 +39,7 @@ public class JerseyController {
     }
 
     @FXML
-    void buyBDjersey(ActionEvent event) throws IOException {
+    public void buyBDjersey(ActionEvent event) throws IOException {
         FileWriter fw = new FileWriter(DataFile.tempFIle,true);
         BufferedWriter b = new BufferedWriter(fw);
         String addData = "\n"+"BD Jersey "+"= 1000";
@@ -53,7 +51,7 @@ public class JerseyController {
     }
 
     @FXML
-    void buyBarcaJersey(ActionEvent event) throws IOException {
+    public void buyBarcaJersey(ActionEvent event) throws IOException {
         FileWriter fw = new FileWriter(DataFile.tempFIle,true);
         BufferedWriter b = new BufferedWriter(fw);
         String addData = "\n"+"Barcelona Jersey "+"= 1000";
@@ -65,7 +63,7 @@ public class JerseyController {
     }
 
     @FXML
-    void buyIndJersey(ActionEvent event)throws IOException  {
+    public void buyIndJersey(ActionEvent event)throws IOException  {
         FileWriter fw = new FileWriter(DataFile.tempFIle,true);
         BufferedWriter b = new BufferedWriter(fw);
         String addData = "\n"+"Ind Jersey "+"= 1000";
@@ -77,7 +75,7 @@ public class JerseyController {
     }
 
     @FXML
-    void buyPakJersey(ActionEvent event)throws IOException  {
+    public void buyPakJersey(ActionEvent event)throws IOException  {
         FileWriter fw = new FileWriter(DataFile.tempFIle,true);
         BufferedWriter b = new BufferedWriter(fw);
         String addData = "\n"+"Pakistan Jersey "+"= 1000";
@@ -89,7 +87,7 @@ public class JerseyController {
     }
 
     @FXML
-    void buyPsgJersey(ActionEvent event)throws IOException {
+    public void buyPsgJersey(ActionEvent event)throws IOException {
         FileWriter fw = new FileWriter(DataFile.tempFIle,true);
         BufferedWriter b = new BufferedWriter(fw);
         String addData = "\n"+"PSJ Jersey "+"= 1000";
