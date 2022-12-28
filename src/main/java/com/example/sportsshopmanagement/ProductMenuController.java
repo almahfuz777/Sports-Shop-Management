@@ -18,6 +18,7 @@ public class ProductMenuController {
         root = FXMLLoader.load(getClass().getResource("/Jersey.fxml"));
         stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
+        stage.setTitle("Jersey");
         stage.setScene(scene);
         stage.show();
 
@@ -28,6 +29,7 @@ public class ProductMenuController {
         root = FXMLLoader.load(getClass().getResource("/Menu.fxml"));
         stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
+        stage.setTitle("Menu");
         stage.setScene(scene);
         stage.show();
 
@@ -38,6 +40,7 @@ public class ProductMenuController {
         root = FXMLLoader.load(getClass().getResource("/Football.fxml"));
         stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
+        stage.setTitle("Cricket");
         stage.setScene(scene);
         stage.show();
 
@@ -48,6 +51,7 @@ public class ProductMenuController {
         root = FXMLLoader.load(getClass().getResource("/Cricket.fxml"));
         stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
+        stage.setTitle("Football");
         stage.setScene(scene);
         stage.show();
 

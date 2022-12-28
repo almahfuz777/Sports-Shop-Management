@@ -1,4 +1,1 @@
-
-Barcelona Jersey = 1000
-2022 WORLDCUP BALL= 500
-CRICKET BAT= 1000
+PSJ Jersey = 1000

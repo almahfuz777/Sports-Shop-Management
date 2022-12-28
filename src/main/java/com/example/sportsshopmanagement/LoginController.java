@@ -6,13 +6,11 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.Optional;
 
 public class LoginController {
 
@@ -20,18 +18,24 @@ public class LoginController {
     private Label errotTextField;
     @FXML
     private PasswordField LogUserPass;
+
     @FXML
     private Button logInBtn;
+
     @FXML
     private TextField logUserName;
     @FXML
     private Button SignBtn;
+
     @FXML
     private TextField signUserName;
+
     @FXML
     private PasswordField signUserPass;
+
     @FXML
     private Label errorLabel;
+
 
     private Stage stage ;
     private Scene scene ;
@@ -42,12 +46,13 @@ public class LoginController {
         root = FXMLLoader.load(getClass().getResource("/SignUp.fxml"));
         stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
+        stage.setTitle("Sign Up");
         stage.setScene(scene);
         stage.show();
 
     }
     public void switchToSignIn(ActionEvent event) throws IOException{
-
+        //kaj shesh
         root = FXMLLoader.load(getClass().getResource("/Login.fxml"));
         stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
@@ -75,10 +80,16 @@ public class LoginController {
             root = FXMLLoader.load(getClass().getResource("/Menu.fxml"));
             stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
             scene = new Scene(root);
+            stage.setTitle("Menu");
             stage.setScene(scene);
             stage.show();
 
         }
+
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setTitle("Success");
+        alert.setContentText("Successfully Log In");
+        Optional<ButtonType> result = alert.showAndWait();
     }
     @FXML
    public void signUpButton(ActionEvent event) throws IOException {
@@ -98,6 +109,11 @@ public class LoginController {
             stage.show();
 
         }
+
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setTitle("Success");
+        alert.setContentText("Successfully Sign Up !");
+        Optional<ButtonType> result = alert.showAndWait();
     }
 
 }

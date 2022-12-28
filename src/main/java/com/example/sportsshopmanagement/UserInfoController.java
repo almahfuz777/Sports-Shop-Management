@@ -26,10 +26,11 @@ public class UserInfoController implements Initializable {
     private Label passwordLabel;
 
     @FXML
-    public void GOBackTOMenu(ActionEvent event) throws IOException {
+    void GOBackTOMenu(ActionEvent event) throws IOException {
         root = FXMLLoader.load(getClass().getResource("/Menu.fxml"));
         stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
+        stage.setTitle("Menu");
         stage.setScene(scene);
         stage.show();
 

@@ -6,11 +6,14 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
+import javafx.scene.control.ButtonType;
 import javafx.stage.Stage;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.Optional;
 
 public class CricketController {
     private Stage stage ;
@@ -18,16 +21,25 @@ public class CricketController {
     private Parent root ;
 
     @FXML
-    public void GoBackToProductMenu(ActionEvent event)throws IOException {
+    void GoBackToProductMenu(ActionEvent event)throws IOException {
         root = FXMLLoader.load(getClass().getResource("/ProductsMenu.fxml"));
         stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
+        stage.setTitle("Product Menu");
         stage.setScene(scene);
         stage.show();
+
+
     }
 
     @FXML
-    public void buyBall(ActionEvent event) throws IOException {
+    void buyBall(ActionEvent event) throws IOException {
+
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setTitle("Success");
+        alert.setContentText("Successfully Added Cricket BAll to your cart");
+        Optional<ButtonType> result = alert.showAndWait();
+
         FileWriter fw = new FileWriter(DataFile.tempFIle,true);
         BufferedWriter b = new BufferedWriter(fw);
         String addData = "\n"+"CRICKET BAL "+"= 250" ;
@@ -39,7 +51,11 @@ public class CricketController {
     }
 
     @FXML
-    public void buyBat(ActionEvent event)throws IOException {
+    void buyBat(ActionEvent event)throws IOException {
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setTitle("Success");
+        alert.setContentText("Successfully Added 2022 Cricket Bat to your cart");
+        Optional<ButtonType> result = alert.showAndWait();
         FileWriter fw = new FileWriter(DataFile.tempFIle,true);
         BufferedWriter b = new BufferedWriter(fw);
         String addData = "\n"+"CRICKET BAT"+"= 1000" ;
@@ -48,10 +64,15 @@ public class CricketController {
         fw.close();
         DataFile.CutomerBill = DataFile.CutomerBill+1000 ;
 
+
     }
 
     @FXML
-    public void buyPad(ActionEvent event)throws IOException {
+    void buyPad(ActionEvent event)throws IOException {
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setTitle("Success");
+        alert.setContentText("Successfully Added Cricket Pad to your cart");
+        Optional<ButtonType> result = alert.showAndWait();
         FileWriter fw = new FileWriter(DataFile.tempFIle,true);
         BufferedWriter b = new BufferedWriter(fw);
         String addData = "\n"+"CRICKET PAD "+"= 500" ;
@@ -59,6 +80,7 @@ public class CricketController {
         b.close();
         fw.close();
         DataFile.CutomerBill = DataFile.CutomerBill+500 ;
+
 
     }
 

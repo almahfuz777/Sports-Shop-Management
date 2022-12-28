@@ -7,15 +7,16 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextArea;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.input.MouseEvent;
+import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 
 import java.io.*;
 import java.net.URL;
+import java.nio.Buffer;
 import java.util.ArrayList;
+import java.util.Optional;
 import java.util.ResourceBundle;
 import java.util.Scanner;
 
@@ -27,6 +28,7 @@ public class CartController implements Initializable {
     @FXML
     private TextArea textfileAreaofCart;
 
+
     private Stage stage ;
     private Scene scene ;
     private Parent root ;
@@ -35,10 +37,11 @@ public class CartController implements Initializable {
     private TextField cartItemName;
 
     @FXML
-    public void getCartText(MouseEvent event) throws IOException{
+    void getCartText(MouseEvent event) throws IOException{
 
         Scanner sc = new Scanner(DataFile.tempFIle);
         ArrayList<String> str = new ArrayList<>();
+
 
         while (sc.hasNext()){
             str.add(sc.nextLine()) ;
@@ -51,33 +54,46 @@ public class CartController implements Initializable {
             listString += s + "\n";
         }
 
+
         CartLabel.setText(listString);
+
+
+
+
+
     }
 
     @FXML
-    public void goBackToMenu(ActionEvent event) throws IOException {
+    void goBackToMenu(ActionEvent event) throws IOException {
         root = FXMLLoader.load(getClass().getResource("/Menu.fxml"));
         stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
+        stage.setTitle("Menu");
         stage.setScene(scene);
         stage.show();
 
     }
 
+
     @FXML
-    public void submitCart(ActionEvent event) throws  IOException{
-       int bill = DataFile.CutomerBill ;
+    void submitCart(ActionEvent event) throws  IOException{
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setTitle("Success");
+        alert.setContentText("Successfully Submitted your choice");
+        Optional<ButtonType> result = alert.showAndWait();
+
+        int bill = DataFile.CutomerBill ;
 
        String itemname = cartItemName.getText();
 
 
-       Scanner sc = new Scanner(DataFile.tempFIle);
-       ArrayList<String> str = new ArrayList<>();
+         Scanner sc = new Scanner(DataFile.tempFIle);
+        ArrayList<String> str = new ArrayList<>();
 
 
-       while (sc.hasNext()){
-           str.add(sc.nextLine()) ;
-       }
+        while (sc.hasNext()){
+            str.add(sc.nextLine()) ;
+        }
 
 
         for (int i = 0; i < str.size(); i++) {
@@ -96,6 +112,7 @@ public class CartController implements Initializable {
             listString += s + "\n";
         }
 
+
         CartLabel.setText(listString);
 
 
@@ -103,13 +120,33 @@ public class CartController implements Initializable {
 
         totalbill.setText(totalMoney);
 
+
         //file e save korte hbe ------jate store thake.........
+
+
+        for (String s : str)
+        {
+            FileWriter fw = new FileWriter(DataFile.tempFIle);
+            BufferedWriter b = new BufferedWriter(fw);
+            String addData = s+"\n";
+            b.write(addData);
+            b.close();
+            fw.close();
+
+        }
+
+
+
+
 
     }
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+
         String str = DataFile.CutomerBill+" ";
+
+
         totalbill.setText(str);
 
     }
