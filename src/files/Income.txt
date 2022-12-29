@@ -1,0 +1,13 @@
+
+abid 4000
+naimur 2500
+abid 0
+abid 0
+abid 0
+abid 0
+abid 0
+abid 0
+abid 0
+abid 0
+abid 0
+abid 0
