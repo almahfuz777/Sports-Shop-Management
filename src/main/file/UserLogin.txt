@@ -3,11 +3,3 @@ abid 123
 naimur 1234
 mahfuz 12345
 tahmid 123456
-person aaaa
-person2 abab
-safasfa sfasfaf
-najifa 123456
-yousuf ffff
-demo aaaa
-touhid aaaa
-adasfa aasag

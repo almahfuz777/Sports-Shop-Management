@@ -1,5 +1,4 @@
 package com.example.sportsshopmanagement;
-
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -13,6 +12,7 @@ import java.io.IOException;
 import java.util.Optional;
 
 public class LoginController {
+
 
     @FXML
     private Label errotTextField;
@@ -52,7 +52,7 @@ public class LoginController {
 
     }
     public void switchToSignIn(ActionEvent event) throws IOException{
-        //kaj shesh
+
         root = FXMLLoader.load(getClass().getResource("/Login.fxml"));
         stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
@@ -73,6 +73,11 @@ public class LoginController {
 
         }
         else{
+            Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+            alert.setTitle("Success");
+            alert.setContentText("Successfully Log In");
+            Optional<ButtonType> result = alert.showAndWait();
+
             DataFile.CustomerName=logUserName.getText() ;
             DataFile.CustomerPass =LogUserPass.getText() ;
 
@@ -86,10 +91,7 @@ public class LoginController {
 
         }
 
-        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-        alert.setTitle("Success");
-        alert.setContentText("Successfully Log In");
-        Optional<ButtonType> result = alert.showAndWait();
+
     }
     @FXML
    public void signUpButton(ActionEvent event) throws IOException {
@@ -114,6 +116,16 @@ public class LoginController {
         alert.setTitle("Success");
         alert.setContentText("Successfully Sign Up !");
         Optional<ButtonType> result = alert.showAndWait();
+    }
+    @FXML
+    void adminButton(ActionEvent event) throws IOException {
+        root = FXMLLoader.load(getClass().getResource("/SellerLogin.fxml"));
+        stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setTitle("Admin Login Page");
+        stage.setScene(scene);
+        stage.show();
+
     }
 
 }

@@ -51,7 +51,6 @@ public class FootballController {
         b.close();
         fw.close();
         DataFile.CutomerBill = DataFile.CutomerBill+500 ;
-
     }
 
     @FXML
@@ -67,7 +66,6 @@ public class FootballController {
         b.close();
         fw.close();
         DataFile.CutomerBill = DataFile.CutomerBill+500 ;
-
     }
 
     @FXML

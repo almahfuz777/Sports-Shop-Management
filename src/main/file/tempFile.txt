@@ -1,1 +1,1 @@
-PSJ Jersey = 1000
+Pakistan Jersey = 1000

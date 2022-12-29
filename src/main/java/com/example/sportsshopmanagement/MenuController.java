@@ -11,6 +11,8 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
 import javafx.stage.Stage;
 
+import java.io.BufferedWriter;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Optional;
 
@@ -20,6 +22,14 @@ public class MenuController {
     private Parent root ;
     @FXML
     void MenuExit(ActionEvent event) throws IOException {
+
+        FileWriter fw = new FileWriter(DataFile.Income,true);
+        BufferedWriter b = new BufferedWriter(fw);
+        String addData = "\n"+DataFile.CustomerName+" "+DataFile.CutomerBill ;
+        b.write(addData);
+        b.close();
+        fw.close();
+
         Alert alert = new Alert(Alert.AlertType.WARNING);
         alert.setTitle("LOGOUT");
         alert.setContentText("Successfully Log Out from the program");
